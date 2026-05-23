@@ -43,6 +43,10 @@
     margin: 32px 0 8px;
     color: var(--accent);
   }
+  h3 {
+    font-size: 15px;
+    margin: 16px 0 4px;
+  }
   .meta {
     color: var(--muted);
     font-size: 14px;
@@ -75,80 +79,122 @@
 <body>
 <main>
 <h1>LingoFire — Privacy Policy</h1>
-<p class="meta"><strong>Effective Date:</strong> May 20, 2026 &middot; <strong>Last Updated:</strong> May 20, 2026</p>
+<p class="meta"><strong>Effective Date:</strong> May 23, 2026 &middot; <strong>Last Updated:</strong> May 23, 2026</p>
 
 <h2>1. Introduction</h2>
-<p>Welcome to our mobile application ("the App"). We are committed to protecting your privacy and handling your personal information responsibly. This Privacy Policy explains how we collect, use, store, and safeguard your information when you use our App on iOS or Android devices.</p>
+<p>Welcome to LingoFire ("the App"). We are committed to protecting your privacy and handling your personal information responsibly. This Privacy Policy explains how we collect, use, store, share, and safeguard your information when you use the App on Android or iOS devices.</p>
 <p>By downloading, installing, or using the App, you agree to the terms of this Privacy Policy. If you do not agree, please do not use the App.</p>
 
 <h2>2. Information We Collect</h2>
-<p>We collect the following categories of information to provide and improve our services:</p>
+<p>We collect the following categories of information to provide and improve the App:</p>
 
-<h3>2.1 Name and Contact Information</h3>
-<p>We may collect your name and email address when you register an account or contact us for support. This information is used to identify your account, communicate with you, and provide customer support.</p>
-
-<h3>2.2 Location Data</h3>
-<p>With your permission, we collect precise or approximate location data from your device. Location data is used for game features that rely on your geographic position (such as location-based gameplay, maps, or regional events). You may disable location access at any time through your device settings; however, certain features of the App may not function properly without it.</p>
-
-<h3>2.3 Usage and Analytics Data</h3>
-<p>We automatically collect certain usage data when you interact with the App, including:</p>
+<h3>2.1 Google Account Information (Sign-In)</h3>
+<p>LingoFire requires you to sign in with a Google account to use the App. When you sign in, we receive the following information from Google:</p>
 <ul>
-  <li>Gameplay activity, progress, scores, and session duration</li>
-  <li>In-app actions, feature usage, and navigation patterns</li>
-  <li>Device type, operating system version, and App version</li>
-  <li>Crash reports and error logs</li>
+  <li>Your email address</li>
+  <li>Your Google display name</li>
+  <li>Your Google profile photo (if you have one)</li>
+  <li>A unique Google user identifier</li>
 </ul>
-<p>This data helps us understand how players interact with the App, diagnose technical issues, and improve game performance and features.</p>
+<p>This information is used solely to create and authenticate your account, identify you within the App, and provide customer support. We do not access any other Google services or data on your behalf, and we do not post anything to your Google account.</p>
+
+<h3>2.2 Game Activity and User-Generated Content</h3>
+<p>When you play LingoFire, we collect the following game-related data:</p>
+<ul>
+  <li>Display name you choose for the App</li>
+  <li>Answers you submit during rounds (words you type for the Name, Animal, Place, Thing categories)</li>
+  <li>Scores, round results, and game history</li>
+  <li>Room codes you create or join</li>
+  <li>Emoji reactions you send during games</li>
+</ul>
+<p>This data is necessary to run multiplayer games and show results. Note that your display name, answers, scores, and reactions are visible to the other players in the same game room.</p>
+
+<h3>2.3 Device, Diagnostic, and Analytics Data</h3>
+<p>We automatically collect technical information when you use the App, including:</p>
+<ul>
+  <li>Device type, operating system version, and App version</li>
+  <li>Crash reports, error logs, and performance traces</li>
+  <li>Advertising identifiers used by Google AdMob to display ads (see Section 5)</li>
+  <li>General usage patterns such as features used and session duration</li>
+</ul>
+<p>This data helps us diagnose technical issues, improve performance and stability, and understand how the App is used.</p>
 
 <h2>3. How We Use Your Information</h2>
 <p>We use the information we collect for the following purposes:</p>
 <ul>
-  <li>To create, manage, and authenticate your account</li>
-  <li>To deliver core game features and personalise your gameplay experience</li>
-  <li>To provide location-based game functionality where applicable</li>
-  <li>To analyse usage patterns and improve App performance, stability, and content</li>
+  <li>To create, manage, and authenticate your account via Google Sign-In</li>
+  <li>To run multiplayer games, match you with other players, and display game results</li>
+  <li>To submit your answers to an automated scoring service (see Section 4) so the App can determine which answers are valid for each round</li>
+  <li>To display advertisements via Google AdMob and to operate basic ad measurement</li>
+  <li>To analyse usage patterns, diagnose crashes, and improve App performance and content</li>
   <li>To respond to your inquiries and provide technical support</li>
-  <li>To detect and prevent fraud, cheating, and security threats</li>
+  <li>To detect and prevent fraud, cheating, abuse, and security threats</li>
   <li>To comply with applicable legal obligations</li>
 </ul>
 
-<h2>4. Data Sharing and Disclosure</h2>
+<h2>4. Data Sharing and Third-Party Service Providers</h2>
 <p>We do not sell, rent, or trade your personal information to third parties for their own marketing purposes.</p>
-<p>We may share your information only in the following limited circumstances:</p>
+
+<h3>4.1 Service Providers We Use</h3>
+<p>LingoFire is built on services provided by Google. The following Google services receive and process data on our behalf:</p>
+<ul>
+  <li><strong>Google Sign-In</strong> — authenticates you when you log in. Google receives standard sign-in metadata (your IP address, device info). See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+  <li><strong>Firebase Authentication</strong> — manages your account credentials and session.</li>
+  <li><strong>Cloud Firestore</strong> — stores your display name, game history, room data, answers, scores, and reactions so games can be played in real time across devices.</li>
+  <li><strong>Firebase Crashlytics</strong> — collects crash reports and error logs so we can fix bugs.</li>
+  <li><strong>Firebase Cloud Functions</strong> — runs server-side logic for the App, including the answer-scoring function.</li>
+  <li><strong>Google Gemini API</strong> — when a round ends, the words you submitted as answers are sent (without your name or email) to Google's Gemini language model via our Cloud Function so it can determine which answers are valid words in the relevant category. See <a href="https://ai.google.dev/gemini-api/terms">Google Gemini API Terms</a>.</li>
+  <li><strong>Google AdMob</strong> — displays advertisements in the App and may collect your advertising identifier and other device signals to serve ads. See Section 5 and <a href="https://policies.google.com/technologies/ads">Google Ads Privacy</a>.</li>
+</ul>
+<p>These providers are bound by their own privacy policies and our service agreements with them, and they process data only as needed to provide their services.</p>
+
+<h3>4.2 Other Players</h3>
+<p>When you play a multiplayer game, the other players in your room can see your display name, the answers you submit, your scores, and any emoji reactions you send. Please choose a display name you are comfortable sharing with strangers.</p>
+
+<h3>4.3 Legal and Other Disclosures</h3>
 <ul>
   <li><strong>Legal compliance:</strong> If required to do so by law, regulation, or valid legal process (such as a court order or government request).</li>
   <li><strong>Protection of rights:</strong> To enforce our Terms of Service, protect the safety of our users, or prevent fraud or illegal activity.</li>
   <li><strong>Business transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred to the successor entity. We will provide notice before your personal data is transferred and becomes subject to a different privacy policy.</li>
 </ul>
 
-<h2>5. Data Storage and Security</h2>
-<p>We store your data on secure servers and implement appropriate technical and organisational measures to protect your personal information against unauthorised access, disclosure, alteration, or destruction. These measures include encryption of data in transit, access controls, and regular security assessments.</p>
+<h2>5. Advertising</h2>
+<p>LingoFire displays advertisements served by Google AdMob. AdMob may use your device's advertising identifier and certain device signals to deliver ads and to measure ad performance.</p>
+<p>You can control ad personalisation in your device settings:</p>
+<ul>
+  <li><strong>Android:</strong> open <em>Settings &rarr; Google &rarr; Ads</em> to reset your advertising ID or opt out of personalised advertising.</li>
+  <li><strong>iOS:</strong> when prompted by the App Tracking Transparency dialog, you can choose to disallow tracking. You can also manage this at any time under <em>Settings &rarr; Privacy &amp; Security &rarr; Tracking</em>.</li>
+</ul>
+<p>If you opt out, you will still see ads, but they will not be personalised based on your activity across other apps and sites.</p>
+
+<h2>6. Data Storage and Security</h2>
+<p>Your data is stored on Google Cloud infrastructure operated by our service providers. We rely on industry-standard technical and organisational measures, including encryption of data in transit, access controls, and the security features provided by Google Cloud and Firebase, to protect your personal information against unauthorised access, disclosure, alteration, or destruction.</p>
 <p>However, no method of transmission over the internet or electronic storage is completely secure. While we strive to protect your information, we cannot guarantee absolute security.</p>
 
-<h2>6. Data Retention</h2>
-<p>We retain your personal information for as long as your account is active or as needed to provide you with the App's services. If you delete your account, we will delete or anonymise your personal data within a reasonable timeframe, except where we are required to retain it for legal or compliance purposes.</p>
+<h2>7. Data Retention</h2>
+<p>We retain your personal information for as long as your account is active or as needed to provide the App's services. If you request deletion of your account, we will delete or anonymise your personal data within a reasonable timeframe, except where we are required to retain it for legal or compliance purposes. Crash reports and aggregated analytics may be retained for diagnostic purposes.</p>
 
-<h2>7. Your Privacy Rights</h2>
+<h2>8. Your Privacy Rights</h2>
 <p>Depending on your country or region of residence, you may have certain rights regarding your personal information, including:</p>
 <ul>
   <li>The right to access the personal information we hold about you</li>
   <li>The right to correct inaccurate or incomplete data</li>
-  <li>The right to request deletion of your personal data</li>
+  <li>The right to request deletion of your personal data and account</li>
   <li>The right to restrict or object to certain processing of your data</li>
   <li>The right to data portability (receiving your data in a structured format)</li>
   <li>The right to withdraw consent where processing is based on your consent</li>
 </ul>
-<p>To exercise any of these rights, please contact us using the details provided in Section 10. We will respond to your request within the timeframe required by applicable law.</p>
+<p>To exercise any of these rights, please contact us using the details provided in Section 11. We will respond to your request within the timeframe required by applicable law.</p>
 
-<h2>8. Children's Privacy</h2>
-<p>Our App does not impose an age restriction and is available to users of all ages. However, if we become aware that we have collected personal information from a child under the age of 13 (or the applicable minimum digital age in your jurisdiction) without verifiable parental consent, we will take steps to delete that information promptly.</p>
-<p>If you are a parent or guardian and believe your child has provided us with personal information without your consent, please contact us immediately at the address provided in Section 10.</p>
+<h2>9. Children's Privacy</h2>
+<p>LingoFire is not directed at children under the age of 13 (or the applicable minimum digital age in your jurisdiction). Google Sign-In requires a Google account, which Google's terms generally restrict to users above this age. If we become aware that we have collected personal information from a child under the applicable minimum age without verifiable parental consent, we will take steps to delete that information promptly.</p>
+<p>If you are a parent or guardian and believe your child has provided us with personal information without your consent, please contact us immediately at the address provided in Section 11.</p>
 
-<h2>9. International Data Transfers</h2>
-<p>Our App is available to users globally. If you are located outside the country where our servers are based, please be aware that your information may be transferred to and processed in a country with different data protection laws than your own. By using the App, you consent to this transfer.</p>
-<p>Where required by applicable law, we implement appropriate safeguards (such as standard contractual clauses) to protect your data during international transfers.</p>
+<h2>10. International Data Transfers</h2>
+<p>LingoFire is available to users globally and our service providers (including Google) operate data centres in multiple countries. If you are located outside the country where our servers are based, your information may be transferred to and processed in a country with different data protection laws than your own. By using the App, you consent to this transfer.</p>
+<p>Where required by applicable law, we and our service providers implement appropriate safeguards (such as standard contractual clauses) to protect your data during international transfers.</p>
 
-<h2>10. Contact Us</h2>
+<h2>11. Contact Us</h2>
 <p>If you have any questions, concerns, or requests regarding this Privacy Policy or the way we handle your personal data, please contact us at:</p>
 <ul>
   <li><strong>Email:</strong> <a href="mailto:lingofiregamesupport@proton.me">lingofiregamesupport@proton.me</a></li>
@@ -156,7 +202,7 @@
   <li><strong>Developer / Company:</strong> Passkey Events Management</li>
 </ul>
 
-<h2>11. Changes to This Privacy Policy</h2>
+<h2>12. Changes to This Privacy Policy</h2>
 <p>We may update this Privacy Policy from time to time to reflect changes in our practices, technology, legal requirements, or other factors. When we make material changes, we will notify you through the App or by email prior to the change taking effect. Your continued use of the App after any update constitutes your acceptance of the revised Privacy Policy.</p>
 <p>We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information.</p>
 
