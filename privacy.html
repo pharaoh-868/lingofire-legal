@@ -79,7 +79,7 @@
 <body>
 <main>
 <h1>LingoFire — Privacy Policy</h1>
-<p class="meta"><strong>Effective Date:</strong> May 23, 2026 &middot; <strong>Last Updated:</strong> June 23, 2026</p>
+<p class="meta"><strong>Effective Date:</strong> May 23, 2026 &middot; <strong>Last Updated:</strong> June 28, 2026</p>
 
 <h2>1. Introduction</h2>
 <p>Welcome to LingoFire ("the App"). We are committed to protecting your privacy and handling your personal information responsibly. This Privacy Policy explains how we collect, use, store, share, and safeguard your information when you use the App on Android or iOS devices.</p>
@@ -107,6 +107,8 @@
   <li>Room codes you create or join</li>
   <li>Purchase records if you buy the optional ad-free / premium upgrade (see Section 4)</li>
   <li>If you report or block another player: the player you report, the reason you select, a copy of the reported content (such as a display name or a submitted answer), and the players on your block list</li>
+  <li>If you use the Friends feature: your friends list, your shareable friend code, friend requests you send or receive, and game invitations you send or receive</li>
+  <li>Your online/availability status — whether the App is currently open and connected — which is shared with the players on your friends list so they can see when you are available to play</li>
 </ul>
 <p>This data is necessary to run multiplayer games and show results. Note that your display name, answers, and scores are visible to the other players in the same game room.</p>
 
@@ -131,6 +133,7 @@
   <li>To respond to your inquiries and provide technical support</li>
   <li>To detect and prevent fraud, cheating, abuse, and security threats</li>
   <li>To operate player-safety tools — letting you report or block other players, and reviewing the reports we receive to enforce our content rules and remove abusive users</li>
+  <li>To operate the Friends feature — letting you add friends by code or invite link, see which of your friends are currently online, and send or accept invitations to play together</li>
   <li>To comply with applicable legal obligations</li>
 </ul>
 
@@ -142,8 +145,8 @@
 <ul>
   <li><strong>Google Sign-In</strong> — authenticates you when you log in. Google receives standard sign-in metadata (your IP address, device info). See <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
   <li><strong>Firebase Authentication</strong> — manages your account credentials and session.</li>
-  <li><strong>Cloud Firestore</strong> — stores your display name, profile, game history, room data, scores, leaderboard entries, and moderation reports.</li>
-  <li><strong>Firebase Realtime Database</strong> — stores in-round answers and player presence (online status) so multiplayer rounds stay in sync in real time.</li>
+  <li><strong>Cloud Firestore</strong> — stores your display name, profile, game history, room data, scores, leaderboard entries, moderation reports, and (if you use the Friends feature) your friend connections, friend requests, and game invitations.</li>
+  <li><strong>Firebase Realtime Database</strong> — stores in-round answers and your online presence status so multiplayer rounds stay in sync in real time and the players on your friends list can see when you are online.</li>
   <li><strong>Firebase Crashlytics</strong> — collects crash reports and error logs so we can fix bugs.</li>
   <li><strong>Firebase Analytics</strong> — collects anonymous usage events (such as game completions and session length) and standard device/region metadata so we can understand engagement and improve the App.</li>
   <li><strong>Firebase Cloud Functions</strong> — runs server-side logic for the App, including the answer-scoring function.</li>
@@ -155,6 +158,7 @@
 
 <h3>4.2 Other Players</h3>
 <p>When you play a multiplayer game, the other players in your room can see your display name, the answers you submit, and your scores. Your display name and scores may also appear on public daily and weekly leaderboards that are visible to all players of the App. Please choose a display name you are comfortable sharing publicly.</p>
+<p>If you use the Friends feature, players you have added as friends can see your display name, whether you are currently online, and can send you invitations to play. A player can only add you as a friend if you share your friend code or invite link with them. You can remove a friend, or block a player, at any time.</p>
 
 <h3>4.3 Legal and Other Disclosures</h3>
 <ul>
@@ -178,7 +182,7 @@
 <p>However, no method of transmission over the internet or electronic storage is completely secure. While we strive to protect your information, we cannot guarantee absolute security.</p>
 
 <h2>7. Data Retention</h2>
-<p>We retain your personal information for as long as your account is active or as needed to provide the App's services. If you request deletion of your account, we will delete or anonymise your personal data within a reasonable timeframe, except where we are required to retain it for legal or compliance purposes. Crash reports and aggregated analytics may be retained for diagnostic purposes.</p>
+<p>We retain your personal information for as long as your account is active or as needed to provide the App's services. If you request deletion of your account, we will delete or anonymise your personal data within a reasonable timeframe, except where we are required to retain it for legal or compliance purposes. When you delete your account, your friend connections are also removed from your friends' lists, and your friend code, friend requests, and pending game invitations are deleted. Game invitations are short-lived and expire automatically. Crash reports and aggregated analytics may be retained for diagnostic purposes.</p>
 
 <h2>8. Your Privacy Rights</h2>
 <p>Depending on your country or region of residence, you may have certain rights regarding your personal information, including:</p>
